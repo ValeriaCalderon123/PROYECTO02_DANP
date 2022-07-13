@@ -43,9 +43,15 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    //FIREBASE
+    implementation 'com.google.firebase:firebase-auth:21.0.5'
+    implementation 'com.google.firebase:firebase-analytics:21.0.0'
     implementation 'com.google.firebase:firebase-firestore-ktx:24.2.0'
+
+
     //implementation 'com.google.firebase:firebase-common-ktx:20.0.0'
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
+
     implementation "androidx.recyclerview:recyclerview:1.2.1"
     implementation 'androidx.appcompat:appcompat:1.4.2'
     // Android Jetpack Paging 3.0
@@ -63,6 +69,10 @@ dependencies {
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
 
+    //PREFERENCE
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
 
 
 
