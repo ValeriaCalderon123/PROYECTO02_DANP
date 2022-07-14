@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import com.example.lab05_room.AnimalsViewHolder
-import com.example.lab05_room.data.entity.Animals
+import com.example.proyecto02_danp.data.entity.Animals
 
 
 class AnimalsAdapter : PagingDataAdapter<Animals, AnimalsViewHolder>(AnimalsComparator) {

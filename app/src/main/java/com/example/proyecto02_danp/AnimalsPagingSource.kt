@@ -3,7 +3,7 @@ package com.example.proyecto02_danp
 import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.example.lab05_room.data.entity.Animals
+import com.example.proyecto02_danp.data.entity.Animals
 import com.example.lab05_room.data.entity.AnimalsResponse
 import com.example.proyecto02_danp.data.APIService
 import java.io.IOException

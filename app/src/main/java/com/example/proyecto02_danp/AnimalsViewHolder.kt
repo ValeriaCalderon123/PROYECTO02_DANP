@@ -3,7 +3,7 @@ package com.example.lab05_room
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.lab05_room.data.entity.Animals
+import com.example.proyecto02_danp.data.entity.Animals
 import com.example.proyecto02_danp.R
 
 class AnimalsViewHolder(view: View): RecyclerView.ViewHolder(view) {
