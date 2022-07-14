@@ -3,6 +3,7 @@ package com.example.proyecto02_danp
 import android.graphics.Color
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.preferencesOf
 import androidx.datastore.preferences.core.stringPreferencesKey
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -39,7 +40,7 @@ class DataStore(
     }
 
     val idUserT: Flow<String>
-        get() = dataStore.data.map { preferences ->
+        = dataStore.data.map { preferences ->
             preferences[SESSION_ID_USER] ?: ""
         }
 
@@ -59,6 +60,7 @@ class DataStore(
         }
 
     companion object {
+
         const val PREFS_NAME = "PREFS_NAME"
         private val BACKGROUND_COLOR = stringPreferencesKey("key_app_background_color")
         private val SESSION_ID_USER = stringPreferencesKey("session_text_la")

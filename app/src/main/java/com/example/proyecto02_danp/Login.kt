@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.lifecycleScope
@@ -27,9 +28,15 @@ class Login : AppCompatActivity() {
                 password.text.toString()).addOnCompleteListener{
                     if(it.isSuccessful){
                         saveToken((it.result?.user?.uid).toString())
-
+                        lifecycleScope.launch {
+                            notePrefsData.idUserT.collect { mycolor ->
+                                //idUSER=mycolor
+                                Log.e("DATAcp;or: ", mycolor.toString())
+                            }
+                        }
                         //val intentLogin = Intent(this, Login::class.java)
                         //startActivity(intentLogin)
+
                     } else{
                         val msg="USUARIO NO REGISTRADO"
                         Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
@@ -41,6 +48,7 @@ class Login : AppCompatActivity() {
     private fun saveToken(idUserA: String) {
         lifecycleScope.launch {
             notePrefsData.saveidUSER(idUserA)
+
         }
     }
 }

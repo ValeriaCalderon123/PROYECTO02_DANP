@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,8 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     lateinit var animalsViewModel: AnimalsViewModel
     lateinit var animalsAdapter: AnimalsAdapter
-    private val Context.dataStore by preferencesDataStore(DataStore.PREFS_NAME)
-    lateinit var notePrefsData: DataStore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -36,15 +34,24 @@ class MainActivity : AppCompatActivity() {
         setupViewModel()
         setupList()
         initRecyclerView()
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+          val item : MenuItem? = findViewById(R.id.logout);
+
+
+
         menuInflater.inflate(R.menu.custom_menu,menu)
 
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        //item.itemId.
+
         return when(item.itemId){
 
             R.id.login->{
@@ -54,9 +61,7 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.logout->{
                 FirebaseAuth.getInstance().signOut()
-                lifecycleScope.launch {
-                    notePrefsData.deleteidUSER()
-                }
+
                 val intentLogOut = Intent(this, MainActivity::class.java)
                 startActivity(intentLogOut)
                 return true

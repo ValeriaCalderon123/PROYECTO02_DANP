@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="colors">
+        <item>Azul</item>
+        <item>Rosado</item>
+        <item>Anaranjado</item>
+        <item>Blanco</item>
+    </string-array>
+    <string-array name="fuente">
+        <item>Casual</item>
+        <item>Sans-Serif</item>
+        <item>Cursiva</item>
+    </string-array>
+</resources>

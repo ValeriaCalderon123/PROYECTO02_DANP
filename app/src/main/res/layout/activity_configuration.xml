@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ConfigurationActivity"
+    android:id="@+id/principalConfiguration"
     tools:layout_editor_absoluteX="5dp"
     tools:layout_editor_absoluteY="-44dp">
 
@@ -26,7 +27,7 @@
         android:layout_marginTop="52dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/sizeConfiguration"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -52,13 +53,13 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:text="Tamaño"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
+        app:layout_constraintEnd_toStartOf="@+id/sizeConfiguration"
         app:layout_constraintHorizontal_bias="0.433"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/sizeConfiguration"
         android:layout_width="276dp"
         android:layout_height="38dp"
         android:layout_marginTop="15dp"
@@ -89,29 +90,34 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="68dp"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintBottom_toTopOf="@+id/saveconfiguration"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/sizeConfiguration" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/saveconfiguration"
         android:layout_width="360dp"
         android:layout_height="48dp"
         android:layout_marginTop="63dp"
+        android:layout_marginBottom="7dp"
         android:text="GUARDAR"
+        app:layout_constraintBottom_toTopOf="@+id/cancelConfiguration"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner2" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/cancelConfiguration"
         android:layout_width="360dp"
         android:layout_height="48dp"
         android:layout_marginTop="7dp"
-        android:layout_marginBottom="415dp"
+        android:layout_marginBottom="220dp"
         android:text="CANCELAR"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/saveconfiguration" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
